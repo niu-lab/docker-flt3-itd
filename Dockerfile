@@ -15,8 +15,7 @@ ADD https://github.com/sbt/sbt/releases/download/v1.4.5/sbt-1.4.5.tgz /usr/local
 
 # install packages
 RUN apt-get update \
-    && apt-get install -y apt-utils \
-    && apt-get install -y yum vim wget gcc-5 g++-5 make cmake git \
+    && apt-get install -y apt-utils yum vim wget gcc-5 g++-5 make cmake git \
     
     # lib
     && apt-get install -y zlib1g-dev libncurses5-dev libbz2-dev liblzma-dev libcurl4-gnutls-dev \
@@ -101,11 +100,11 @@ RUN wget https://github.com/broadinstitute/picard/releases/download/2.23.0/picar
 
 # ScanITD
 RUN git clone https://github.com/ylab-hi/ScanITD.git \
-&& pip3 install numpy \
-&& pip3 install pandas \
-&& pip3 install pyfaidx \
-&& pip3 install pysam \
-&& pip3 install scikit-bio \
+&& pip3 install --timeout 100 numpy \
+&& pip3 install --timeout 100 pandas \
+&& pip3 install --timeout 100 pyfaidx \
+&& pip3 install --timeout 100 pysam \
+&& pip3 install --timeout 100 scikit-bio \
 && cd ScanITD \
 && sed -i "256s/decode('utf-8')/encode('utf-8').decode('utf-8')/g" ScanITD.py
 
