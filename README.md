@@ -1,9 +1,9 @@
-# docker-flt3-itd
-A Docker image with several *FLT3*-ITD detection tools
+# Docker-FLT3-ITD
+A Docker image for *FLT3*-internal tandem duplication (*FLT3*-ITD) identification in acute myeloid leukaemia (AML).
 
 ## Introduction
 
-A Docker image for *FLT3*-internal tandem duplication (*FLT3*-ITD)  identification in acute myeloid leukaemia (AML). It runs into a [Docker](https://www.docker.com/) container, ready to be downloaded and used on any operating system supported by [Docker](https://www.docker.com/).
+Docker-FLT3-ITD is a Docker image with several *FLT3*-ITD detection tools. It runs into a [Docker](https://www.docker.com/) container, ready to be downloaded and used on any operating system supported by [Docker](https://www.docker.com/).
 
 We have evaluated the qualitative and quantitative analysis capabilities, result readability, and execution time of six representative tools using simulated and real biological data. To maximize user convenience, we selected several detection tools with effective performance and built a Docker image.
 
@@ -32,7 +32,7 @@ Download and install the image following the steps below:
 4. Run the container named `mytest` with the image:
 
    ```
-   docker run -it --name mytest -v /local directory:/container directory flt3_itd_detection:1.0 
+   docker run -it --name mytest -v /local_directory:/container_directory flt3_itd_detection:1.0 
    ```
 
    `-it` used for interactive processes
