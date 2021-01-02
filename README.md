@@ -18,7 +18,7 @@ Download and install the image following the steps below:
 2. Download the *Dockerfile* and packages with this command:
 
    ```
-   git clone http:// 
+   git clone https://github.com/niu-lab/docker-flt3-itd
    ```
 
 3. Build the image:
