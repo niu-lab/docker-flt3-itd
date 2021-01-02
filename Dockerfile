@@ -116,3 +116,5 @@ RUN git clone https://github.com/ht50/FLT3_ITD_ext.git \
 && sed -i '89s/fgbio\.jar/\/biosoft\/fgbio\/target\/scala-2\.13\/fgbio-1\.4\.0-37fbb49-SNAPSHOT\.jar/g' FLT3_ITD_ext.pl \
 && sed -i '90s/bbduk\.sh/\/biosoft\/bbmap\/bbduk\.sh/g' FLT3_ITD_ext.pl \
 && sed -i '91s/picard\.jar/\/biosoft\/picard\.jar/g' FLT3_ITD_ext.pl
+
+WORKDIR /
